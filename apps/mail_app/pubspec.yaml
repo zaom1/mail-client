@@ -1,0 +1,92 @@
+name: mail_app
+description: A modern cross-platform email client.
+version: 0.1.0+1
+publish_to: none
+
+environment:
+  sdk: '>=3.5.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # Internal packages
+  mail_core:
+    path: ../../packages/mail_core
+  mail_protocol:
+    path: ../../packages/mail_protocol
+  mail_storage:
+    path: ../../packages/mail_storage
+  mail_sync:
+    path: ../../packages/mail_sync
+  mail_ui_kit:
+    path: ../../packages/mail_ui_kit
+  mail_plugin_system:
+    path: ../../packages/mail_plugin_system
+
+  # State management
+  flutter_riverpod: ^2.6.1
+  riverpod_annotation: ^2.6.1
+
+  # Navigation
+  go_router: ^14.8.1
+
+  # DI
+  get_it: ^8.0.3
+  injectable: ^2.5.0
+
+  # UI
+  flutter_widget_from_html_core: ^0.15.2
+  dynamic_color: ^1.7.0
+  flutter_quill: ^11.0.0
+
+  # Storage & Security
+  flutter_secure_storage: ^9.2.4
+  path_provider: ^2.1.5
+  path: ^1.9.1
+
+  # Platform
+  url_launcher: ^6.3.1
+  file_picker: ^8.3.7
+  window_manager: ^0.4.3
+  tray_manager: ^0.3.2
+  workmanager: ^0.5.2
+  flutter_local_notifications: ^18.0.1
+
+  # Utilities
+  intl: ^0.20.2
+  logger: ^2.5.0
+  uuid: ^4.5.1
+  timeago: ^3.7.0
+  cached_network_image: ^3.4.1
+  share_plus: ^10.1.4
+  local_auth: ^2.3.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  build_runner: ^2.4.13
+  riverpod_generator: ^2.6.3
+  injectable_generator: ^2.7.0
+  mocktail: ^1.0.4
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/icons/
+
+  fonts:
+    - family: Inter
+      fonts:
+        - asset: fonts/Inter-Regular.ttf
+        - asset: fonts/Inter-Medium.ttf
+          weight: 500
+        - asset: fonts/Inter-SemiBold.ttf
+          weight: 600
+        - asset: fonts/Inter-Bold.ttf
+          weight: 700
