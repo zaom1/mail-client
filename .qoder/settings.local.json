@@ -1,5 +1,25 @@
 {
   "permissions": {
-    "allow": []
+    "allow": [
+      "Bash(which flutter && flutter --version 2>/dev/null || echo \"Flutter not found\")",
+      "Bash(which melos 2>/dev/null || dart pub global list 2>/dev/null | grep melos || echo \"Melos not found\")",
+      "Bash(dart pub global activate melos 2>&1 | tail -5)",
+      "Bash(export PATH=\"$PATH\":\"$HOME/.pub-cache/bin\" && cd /mnt/project && melos bootstrap 2>&1 | tail -30)",
+      "Bash(ls -la /mnt/project/melos.yaml && cat /mnt/project/melos.yaml | head -5)",
+      "Bash(export PATH=\"$PATH\":\"$HOME/.pub-cache/bin\" && melos bootstrap --verbose 2>&1 | tail -40)",
+      "Bash(ls:*)",
+      "Bash(for f in /mnt/project/packages/*/pubspec.yaml /mnt/project/apps/*/pubspec.yaml; do echo \"=== $f ===\"; grep -n \"resolution\" \"$f\" || echo \"NO resolution field\"; done)",
+      "Bash(export PATH=\"$PATH\":\"$HOME/.pub-cache/bin\" && melos bootstrap 2>&1 | tail -40)",
+      "Bash(export PATH=\"$PATH\":\"$HOME/.pub-cache/bin\" && melos --version 2>&1)",
+      "Bash(export PATH=\"$PATH\":\"$HOME/.pub-cache/bin\" && melos bootstrap --help 2>&1 | head -20)",
+      "Bash(find:*)",
+      "Bash(find /mnt/project -name \"pubspec_overrides.yaml\" -delete && find /mnt/project -name \".dart_tool\" -type d -exec rm -rf {} + 2>/dev/null; echo \"Cleaned up\")",
+      "Bash(flutter pub get 2>&1 | tail -50)",
+      "Bash(flutter pub outdated --json 2>/dev/null | head -5 || true; dart pub cache list 2>/dev/null | grep freezed | head -5 || true)",
+      "Bash(dart pub cache add freezed 2>&1 | tail -5)",
+      "Bash(flutter pub get --directory=/mnt/project/apps/mail_app 2>&1 | tail -30)",
+      "Bash(ls /mnt/project/apps/mail_app/web/ 2>/dev/null || echo \"No web directory\")",
+      "Bash(which google-chrome || which chromium-browser || which chromium || echo \"No Chrome finding\"; which flutter && flutter devices 2>&1 | head -10)"
+    ]
   }
 }
