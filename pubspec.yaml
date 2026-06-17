@@ -1,0 +1,5 @@
+name: mail_client_workspace
+description: A modern cross-platform email client built with Flutter.
+
+environment:
+  sdk: '>=3.5.0 <4.0.0'

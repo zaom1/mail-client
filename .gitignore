@@ -1,0 +1,42 @@
+# Dart/Flutter
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+build/
+*.iml
+
+# Pub Cache (local dependency cache)
+.pub-cache/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Melos
+.melos/
+
+# Generated
+pubspec.lock
+!apps/*/pubspec.lock
+
+# Coverage
+coverage/
+*.lcov
+
+# Environment
+.env
+.env.local
+
+# Screenshots
+*.png
+
+# Stray font copies at app root
+apps/mail_app/Inter-*.ttf
