@@ -1,0 +1,21 @@
+name: mail_sync
+description: Email synchronization engine with IDLE push support and incremental sync.
+version: 0.1.0
+publish_to: none
+
+environment:
+  sdk: '>=3.5.0 <4.0.0'
+
+dependencies:
+  mail_core:
+    path: ../mail_core
+  mail_protocol:
+    path: ../mail_protocol
+  mail_storage:
+    path: ../mail_storage
+  logger: ^2.5.0
+  collection: ^1.19.1
+
+dev_dependencies:
+  test: ^1.25.15
+  mocktail: ^1.0.4
