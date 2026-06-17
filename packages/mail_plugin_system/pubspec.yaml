@@ -1,0 +1,19 @@
+name: mail_plugin_system
+description: Plugin system with Dart Isolate sandbox, hooks, permissions, and SDK.
+version: 0.1.0
+publish_to: none
+
+environment:
+  sdk: '>=3.5.0 <4.0.0'
+
+dependencies:
+  mail_core:
+    path: ../mail_core
+  logger: ^2.5.0
+  path_provider: ^2.1.5
+  path: ^1.9.1
+  yaml: ^3.1.3
+
+dev_dependencies:
+  test: ^1.25.15
+  mocktail: ^1.0.4
