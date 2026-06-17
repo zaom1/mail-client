@@ -1,0 +1,13 @@
+name: plugin_dev_template
+description: Template project for developing Mail Client plugins.
+version: 0.1.0
+publish_to: none
+
+environment:
+  sdk: '>=3.5.0 <4.0.0'
+
+dependencies:
+  mail_core:
+    path: ../../packages/mail_core
+  mail_plugin_system:
+    path: ../../packages/mail_plugin_system
